@@ -1,0 +1,12 @@
+version: '3'
+services:
+  guacamole:
+    image: guacamole/guacamole
+    restart: always
+    ports:
+      - "8080:8080"
+    links:
+      - guacd
+  guacd:
+    image: guacamole/guacd
+    restart: always
